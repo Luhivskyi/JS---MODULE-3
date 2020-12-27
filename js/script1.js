@@ -1,14 +1,28 @@
-const apartment = {
-    imgUrl: 'https://via.placeholder.com/640x480',
-    descr: 'Просторная квартира в центре',
-    rating: 4,
-    price: 2153,
-    tags: ['premium', 'promoted', 'top'],
+const hotel = {
+  name: 'Resort Hotel',
+  stars: 5,
+  capacity: 100,
+};
 
- owner : {
- name : 'Генри',
- name : 'Генри',
- phone : '982-126-1588', 
- email : 'henry.carter@aptmail.com',
- },
-  };
+/*
+ * Посмотрите в консоли из каких двух элементов состоит каждый подмассив.
+ * Первый элемент это ключ свойства, второй это значение.
+ */
+const entries = Object.entries(hotel);
+
+/*
+ * На каждой итерации по entries выберем первый элемент подмассива (ключ)
+ * в переменную key, а второй (значение) в переменную value
+ */
+for (const entry of entries) {
+  const key = entry[0];
+  const value = entry[1];
+
+  console.log(`${key}: ${value}`);
+}
+
+/*
+ * name: Resort Hotel
+ * stars: 5
+ * capacity: 100
+ */
